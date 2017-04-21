@@ -4,8 +4,7 @@ tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
-{% assign post = site.posts.first %}
-{% assign content = post.content %}
+{% for post in site.posts offset:0 limit: 3 %}
 
 {% if post.title %}
   <h1 class="entry-title">
@@ -17,3 +16,5 @@ Published: {{ post.date | date: '%m-%d-%Y' }}
 {% if post.excerpt != post.content %}
   <a href="{{ root_url }}{{ post.url }}">Read more...</a>
 {% endif %}
+
+{% endfor %}
