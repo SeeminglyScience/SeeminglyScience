@@ -30,7 +30,7 @@ Invoke whatever is at this path. The path can be a script, an executable, or any
 Invoke a command by name. You don't typically need an operator to invoke a command, but what you
 might not know is you can also use the `.` operator here to invoke a command without creating a new
 scope.
-
+<!--more-->
 For example:
 
 ```powershell
@@ -42,8 +42,6 @@ function MyPrivateCommand {
 $var
 # 10
 ```
-
-<!--more-->
 
 ### Invoke a ScriptBlock
 
