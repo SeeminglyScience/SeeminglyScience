@@ -131,9 +131,9 @@ you might be screaming with excitement.
 $module = Get-Module Pester
 
 & $module { $ExecutionContext.SessionState.Module }
-# ModuleType Version    Name                                ExportedCommands
-# ---------- -------    ----                                ----------------
-# Script     4.0.6      pester                              {Add-AssertionOperator,
+# ModuleType Version    Name                ExportedCommands
+# ---------- -------    ----                ----------------
+# Script     4.0.6      pester              {Add-AssertionOperator,
 ```
 
 This one works a little differently. It isn't *invoking* the module, instead it's acting as a
@@ -160,9 +160,9 @@ was resolved correctly in that table.
 ```powershell
 & (gmo Pester) { $SafeCommands['New-Object'] }
 
-# CommandType     Name                                               Version    Source
-# -----------     ----                                               -------    ------
-# Cmdlet          New-Object                                         3.1.0.0    Microsoft.PowerShell.Utility
+# CommandType     Name           Version    Source
+# -----------     ----           -------    ------
+# Cmdlet          New-Object     3.1.0.0    Microsoft.PowerShell.Utility
 ```
 
 You can also call functions, change the value of script scope variables, and even return classes
