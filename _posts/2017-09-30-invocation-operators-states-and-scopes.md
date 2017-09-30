@@ -43,6 +43,8 @@ $var
 # 10
 ```
 
+<!--more-->
+
 ### Invoke a ScriptBlock
 
 ```powershell
